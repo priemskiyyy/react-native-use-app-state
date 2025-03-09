@@ -1,7 +1,7 @@
 {
   "name": "react-native-use-app-state",
   "version": "0.1.0",
-  "description": "hooks to manage react-native app state",
+  "description": "hooks & helpers to manage react-native app state",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
