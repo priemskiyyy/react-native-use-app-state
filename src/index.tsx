@@ -1,3 +1,4 @@
-export function multiply(a: number, b: number): number {
-  return a * b;
-}
+export * from './hooks/useOnAppStateChange';
+export * from './hooks/useAppState';
+export * from './utils/isForegroundAppState';
+export * from './utils/isBackgroundAppState';
