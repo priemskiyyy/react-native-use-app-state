@@ -14,6 +14,24 @@ type OnAppStateChangeOptions = {
   handleExtensionState?: boolean;
 };
 
+/**
+ * React hook to listen for application state changes and trigger callbacks accordingly.
+ *
+ * @param {Object} callbacks - Callback functions to handle app state changes.
+ * @param {function(AppStateStatus): void} [callbacks.onApplicationWillChangeState] - Called when the app state is about to change.
+ * @param {function(): void} [callbacks.onApplicationWillEnterForeground] - Called when the app enters the foreground.
+ * @param {function(): void} [callbacks.onApplicationWillEnterBackground] - Called when the app enters the background.
+ * @param {Object} [options] - Additional configuration options.
+ * @param {boolean} [options.handleExtensionState] - Whether to handle extension states.
+ *
+ * @example
+ * useOnAppStateChange({
+ *   onApplicationWillChangeState: (nextState) => console.log('App state changed:', nextState),
+ *   onApplicationWillEnterForeground: () => console.log('App entered foreground'),
+ *   onApplicationWillEnterBackground: () => console.log('App entered background')
+ * });
+ */
+
 export const useOnAppStateChange = (
   callbacks: OnAppStateChangeCallbacks,
   options?: OnAppStateChangeOptions
